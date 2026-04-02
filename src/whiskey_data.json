@@ -6,7 +6,7 @@
     "quantity": "90",
     "price": 234000,
     "priceStr": "₩234,000",
-    "probability": 27.05,
+    "probability": 46.88,
     "grade": "N",
     "color": "#a1a1aa"
   },
@@ -17,7 +17,7 @@
     "quantity": "24",
     "price": 208000,
     "priceStr": "₩208,000",
-    "probability": 1.82,
+    "probability": 1.92,
     "grade": "R",
     "color": "#60a5fa"
   },
@@ -28,7 +28,7 @@
     "quantity": "18",
     "price": 286000,
     "priceStr": "₩286,000",
-    "probability": 1.37,
+    "probability": 2.37,
     "grade": "SR",
     "color": "#c084fc"
   },
@@ -39,7 +39,7 @@
     "quantity": "24",
     "price": 286000,
     "priceStr": "₩286,000",
-    "probability": 2.42,
+    "probability": 1.92,
     "grade": "R",
     "color": "#60a5fa"
   },
@@ -50,7 +50,7 @@
     "quantity": "18",
     "price": 234000,
     "priceStr": "₩234,000",
-    "probability": 1.14,
+    "probability": 2.37,
     "grade": "SR",
     "color": "#c084fc"
   },
@@ -61,7 +61,7 @@
     "quantity": "24",
     "price": 234000,
     "priceStr": "₩234,000",
-    "probability": 2.02,
+    "probability": 1.92,
     "grade": "R",
     "color": "#60a5fa"
   },
@@ -72,7 +72,7 @@
     "quantity": "18",
     "price": 598000,
     "priceStr": "₩598,000",
-    "probability": 0.46,
+    "probability": 3.11,
     "grade": "SSR",
     "color": "#facc15"
   },
@@ -83,7 +83,7 @@
     "quantity": "24",
     "price": 208000,
     "priceStr": "₩208,000",
-    "probability": 1.82,
+    "probability": 1.92,
     "grade": "R",
     "color": "#60a5fa"
   },
@@ -94,7 +94,7 @@
     "quantity": "12",
     "price": 208000,
     "priceStr": "₩208,000",
-    "probability": 1.03,
+    "probability": 1.58,
     "grade": "SR",
     "color": "#c084fc"
   },
@@ -105,7 +105,7 @@
     "quantity": "18",
     "price": 364000,
     "priceStr": "₩364,000",
-    "probability": 1.7,
+    "probability": 2.37,
     "grade": "SR",
     "color": "#c084fc"
   },
@@ -116,7 +116,7 @@
     "quantity": "30",
     "price": 208000,
     "priceStr": "₩208,000",
-    "probability": 1.82,
+    "probability": 2.4,
     "grade": "R",
     "color": "#60a5fa"
   },
@@ -127,7 +127,7 @@
     "quantity": "30",
     "price": 208000,
     "priceStr": "₩208,000",
-    "probability": 1.81,
+    "probability": 2.4,
     "grade": "R",
     "color": "#60a5fa"
   },
@@ -138,7 +138,7 @@
     "quantity": "30",
     "price": 208000,
     "priceStr": "₩208,000",
-    "probability": 1.81,
+    "probability": 2.4,
     "grade": "R",
     "color": "#60a5fa"
   },
@@ -149,7 +149,7 @@
     "quantity": "30",
     "price": 208000,
     "priceStr": "₩208,000",
-    "probability": 1.81,
+    "probability": 2.39,
     "grade": "R",
     "color": "#60a5fa"
   },
@@ -160,7 +160,7 @@
     "quantity": "30",
     "price": 208000,
     "priceStr": "₩208,000",
-    "probability": 1.81,
+    "probability": 2.39,
     "grade": "R",
     "color": "#60a5fa"
   },
@@ -171,7 +171,7 @@
     "quantity": "30",
     "price": 286000,
     "priceStr": "₩286,000",
-    "probability": 2.42,
+    "probability": 2.39,
     "grade": "R",
     "color": "#60a5fa"
   },
@@ -182,7 +182,7 @@
     "quantity": "30",
     "price": 195000,
     "priceStr": "₩195,000",
-    "probability": 1.71,
+    "probability": 2.39,
     "grade": "R",
     "color": "#60a5fa"
   },
@@ -193,7 +193,7 @@
     "quantity": "6",
     "price": 273000,
     "priceStr": "₩273,000",
-    "probability": 1.31,
+    "probability": 0.79,
     "grade": "SR",
     "color": "#c084fc"
   },
@@ -204,7 +204,7 @@
     "quantity": "6",
     "price": 273000,
     "priceStr": "₩273,000",
-    "probability": 1.31,
+    "probability": 0.79,
     "grade": "SR",
     "color": "#c084fc"
   },
@@ -215,7 +215,7 @@
     "quantity": "12",
     "price": 260000,
     "priceStr": "₩260,000",
-    "probability": 1.25,
+    "probability": 1.58,
     "grade": "SR",
     "color": "#c084fc"
   },
@@ -226,7 +226,7 @@
     "quantity": "12",
     "price": 273000,
     "priceStr": "₩273,000",
-    "probability": 1.31,
+    "probability": 1.58,
     "grade": "SR",
     "color": "#c084fc"
   },
@@ -237,7 +237,7 @@
     "quantity": "12",
     "price": 286000,
     "priceStr": "₩286,000",
-    "probability": 1.36,
+    "probability": 1.58,
     "grade": "SR",
     "color": "#c084fc"
   },
@@ -248,7 +248,7 @@
     "quantity": "12",
     "price": 338000,
     "priceStr": "₩338,000",
-    "probability": 1.59,
+    "probability": 1.58,
     "grade": "SR",
     "color": "#c084fc"
   },
@@ -259,7 +259,7 @@
     "quantity": "12",
     "price": 299000,
     "priceStr": "₩299,000",
-    "probability": 1.42,
+    "probability": 1.58,
     "grade": "SR",
     "color": "#c084fc"
   },
@@ -270,7 +270,7 @@
     "quantity": "1",
     "price": 1092000,
     "priceStr": "₩1,092,000",
-    "probability": 0.78,
+    "probability": 0.17,
     "grade": "SSR",
     "color": "#facc15"
   },
@@ -281,7 +281,7 @@
     "quantity": "5",
     "price": 351000,
     "priceStr": "₩351,000",
-    "probability": 1.64,
+    "probability": 0.65,
     "grade": "SR",
     "color": "#c084fc"
   },
@@ -292,7 +292,7 @@
     "quantity": "8",
     "price": 338000,
     "priceStr": "₩338,000",
-    "probability": 1.59,
+    "probability": 1.05,
     "grade": "SR",
     "color": "#c084fc"
   },
@@ -303,7 +303,7 @@
     "quantity": "1",
     "price": 936000,
     "priceStr": "₩936,000",
-    "probability": 0.68,
+    "probability": 0.17,
     "grade": "SSR",
     "color": "#facc15"
   },
@@ -314,7 +314,7 @@
     "quantity": "6",
     "price": 988000,
     "priceStr": "₩988,000",
-    "probability": 0.72,
+    "probability": 1.04,
     "grade": "SSR",
     "color": "#facc15"
   },
@@ -325,7 +325,7 @@
     "quantity": "1",
     "price": 1329900,
     "priceStr": "₩1,329,900",
-    "probability": 0.94,
+    "probability": 0.17,
     "grade": "SSR",
     "color": "#facc15"
   },
@@ -336,7 +336,7 @@
     "quantity": "1",
     "price": 429000,
     "priceStr": "₩429,000",
-    "probability": 1.98,
+    "probability": 0.13,
     "grade": "SR",
     "color": "#c084fc"
   },
@@ -347,7 +347,7 @@
     "quantity": "6",
     "price": 195000,
     "priceStr": "₩195,000",
-    "probability": 22.95,
+    "probability": 3.12,
     "grade": "N",
     "color": "#a1a1aa"
   },
@@ -358,7 +358,7 @@
     "quantity": "1",
     "price": 195000,
     "priceStr": "₩195,000",
-    "probability": 1.71,
+    "probability": 0.08,
     "grade": "R",
     "color": "#60a5fa"
   },
@@ -369,7 +369,7 @@
     "quantity": "1",
     "price": 988000,
     "priceStr": "₩988,000",
-    "probability": 0.71,
+    "probability": 0.17,
     "grade": "SSR",
     "color": "#facc15"
   },
@@ -380,7 +380,7 @@
     "quantity": "1",
     "price": 988000,
     "priceStr": "₩988,000",
-    "probability": 0.71,
+    "probability": 0.17,
     "grade": "SSR",
     "color": "#facc15"
   },
@@ -391,7 +391,7 @@
     "quantity": "6",
     "price": 234000,
     "priceStr": "₩234,000",
-    "probability": 2.02,
+    "probability": 0.48,
     "grade": "R",
     "color": "#60a5fa"
   }

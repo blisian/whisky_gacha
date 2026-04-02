@@ -23,6 +23,10 @@ function App() {
   const [soundEnabled, setSoundEnabled] = useState(true);
   const [drawCount, setDrawCount] = useState(1);
 
+  const totalQty = items.reduce((sum, item) => sum + Number(item.quantity), 0);
+  const getQuantityPercent = (item: Whiskey) =>
+    totalQty > 0 ? (Number(item.quantity) / totalQty) * 100 : 0;
+
   const drawWhiskey = () => {
     setIsDrawing(true);
     setResults([]);
@@ -32,13 +36,14 @@ function App() {
       const newResults: Whiskey[] = [];
       
       for (let i = 0; i < drawCount; i++) {
-        const random = Math.random() * 100;
+        // 뽑기 확률은 화면의 리스트처럼 "quantity/전체병수" 기준으로 맞춘다.
+        const randomQty = Math.random() * (totalQty || 1);
         let cumulative = 0;
-        let drawnItem = items[items.length - 1]; // Fallback
+        let drawnItem = items[0]; // Fallback
 
         for (const item of items) {
-          cumulative += item.probability;
-          if (random <= cumulative) {
+          cumulative += Number(item.quantity);
+          if (randomQty <= cumulative) {
             drawnItem = item;
             break;
           }
@@ -158,7 +163,7 @@ function App() {
                     <td><span className="badge" style={{ backgroundColor: item.color }}>{item.grade}</span></td>
                     <td>{item.brand}</td>
                     <td>{item.name}</td>
-                    <td>{item.probability}%</td>
+                    <td>{getQuantityPercent(item).toFixed(2)}%</td>
                   </tr>
                 ))}
               </tbody>
