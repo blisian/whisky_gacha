@@ -18,34 +18,42 @@ interface Whiskey {
 
 function App() {
   const [items] = useState<Whiskey[]>(whiskeyData);
-  const [result, setResult] = useState<Whiskey | null>(null);
+  const [results, setResults] = useState<Whiskey[]>([]);
   const [isDrawing, setIsDrawing] = useState(false);
   const [soundEnabled, setSoundEnabled] = useState(true);
+  const [drawCount, setDrawCount] = useState(1);
 
   const drawWhiskey = () => {
     setIsDrawing(true);
-    setResult(null);
+    setResults([]);
 
     // Simulate drawing animation delay
     setTimeout(() => {
-      const random = Math.random() * 100;
-      let cumulative = 0;
-      let drawnItem = items[items.length - 1]; // Fallback
+      const newResults: Whiskey[] = [];
+      
+      for (let i = 0; i < drawCount; i++) {
+        const random = Math.random() * 100;
+        let cumulative = 0;
+        let drawnItem = items[items.length - 1]; // Fallback
 
-      for (const item of items) {
-        cumulative += item.probability;
-        if (random <= cumulative) {
-          drawnItem = item;
-          break;
+        for (const item of items) {
+          cumulative += item.probability;
+          if (random <= cumulative) {
+            drawnItem = item;
+            break;
+          }
         }
+        newResults.push(drawnItem);
       }
 
-      setResult(drawnItem);
+      setResults(newResults);
       setIsDrawing(false);
 
-      // Fanfare for high grades
-      if (drawnItem.grade === 'SSR' || drawnItem.grade === 'SR') {
-        triggerFanfare(drawnItem.grade);
+      // Fanfare for high grades in results
+      const hasHighGrade = newResults.some(item => item.grade === 'SSR' || item.grade === 'SR');
+      if (hasHighGrade) {
+        const bestGrade = newResults.find(item => item.grade === 'SSR') ? 'SSR' : 'SR';
+        triggerFanfare(bestGrade);
       }
     }, 2000);
   };
@@ -83,8 +91,8 @@ function App() {
   return (
     <div className="app-container">
       <header>
-        <h1>🥃 Premium Whiskey Gacha</h1>
-        <p>Your destiny in a single dram</p>
+        <h1>🥃 NAVI Whiskey Gacha</h1>
+        <p>단 한 잔에 담긴 당신의 운명</p>
       </header>
 
       <main>
@@ -92,39 +100,56 @@ function App() {
           {isDrawing ? (
             <div className="drawing-effect">
               <Sparkles className="icon-spin" size={64} color="#facc15" />
-              <p>Choosing the finest barrel...</p>
+              <p>최고의 오크통을 고르는 중...</p>
             </div>
-          ) : result ? (
-            <div className={`result-card grade-${result.grade}`}>
-              <div className="grade-badge" style={{ backgroundColor: result.color }}>{result.grade}</div>
-              <h3>{result.brand}</h3>
-              <h2>{result.name}</h2>
-              <p className="price">{result.priceStr}</p>
-              <button onClick={() => setResult(null)} className="btn-retry">
-                <RotateCcw size={20} /> Try Again
+          ) : results.length > 0 ? (
+            <div className="results-container">
+              {results.map((result, idx) => (
+                <div key={`${result.id}-${idx}`} className={`result-card grade-${result.grade}`}>
+                  <div className="grade-badge" style={{ backgroundColor: result.color }}>{result.grade}</div>
+                  <h3>{result.brand}</h3>
+                  <h2>{result.name}</h2>
+                  <p className="price">{result.priceStr}</p>
+                </div>
+              ))}
+              <button onClick={() => setResults([])} className="btn-retry">
+                <RotateCcw size={20} /> 다시 시도하기
               </button>
             </div>
           ) : (
             <div className="idle-state">
               <Trophy size={80} color="#d97706" />
-              <p>Ready for a pour?</p>
+              <p>한 잔 시음하시겠습니까?</p>
+              
+              <div className="draw-selector">
+                {[1, 5, 10].map(count => (
+                  <button 
+                    key={count} 
+                    className={`count-btn ${drawCount === count ? 'active' : ''}`}
+                    onClick={() => setDrawCount(count)}
+                  >
+                    {count}회
+                  </button>
+                ))}
+              </div>
+
               <button onClick={drawWhiskey} className="btn-draw">
-                DRAW NOW
+                {drawCount}회 뽑기
               </button>
             </div>
           )}
         </div>
 
         <div className="probability-table">
-          <h3>Collection & Probabilities</h3>
+          <h3>컬렉션 및 획득 확률</h3>
           <div className="table-wrapper">
             <table>
               <thead>
                 <tr>
-                  <th>Grade</th>
-                  <th>Brand</th>
-                  <th>Product</th>
-                  <th>Prob.</th>
+                  <th>등급</th>
+                  <th>브랜드</th>
+                  <th>제품명</th>
+                  <th>확률</th>
                 </tr>
               </thead>
               <tbody>
@@ -138,7 +163,7 @@ function App() {
                 ))}
                 <tr>
                   <td colSpan={4} style={{ textAlign: 'center', fontSize: '0.8rem', color: '#666' }}>
-                    And {items.length - 10} more items...
+                    외 {items.length - 10}개의 품목이 더 있습니다...
                   </td>
                 </tr>
               </tbody>
@@ -148,7 +173,7 @@ function App() {
       </main>
 
       <footer>
-        <p>© 2026 Whiskey Gacha Collector. Responsibility in every drop.</p>
+        <p>© 2026 NAVI Whiskey Gacha. 지나친 음주는 건강에 해롭습니다.</p>
         <button className="sound-toggle" onClick={() => setSoundEnabled(!soundEnabled)}>
           {soundEnabled ? <Volume2 size={20} /> : <VolumeX size={20} />}
         </button>
