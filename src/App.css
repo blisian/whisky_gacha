@@ -189,13 +189,14 @@ main {
 .table-wrapper {
   background: var(--card-bg);
   border-radius: 1rem;
-  overflow: hidden;
+  overflow-x: auto;
   border: 1px solid #334155;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
+  min-width: 400px;
 }
 
 th, td {
@@ -248,4 +249,82 @@ footer {
 
 .grade-SSR h2 {
   color: #facc15;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 1rem;
+  }
+
+  header {
+    margin-bottom: 2rem;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  main {
+    gap: 2rem;
+  }
+
+  .gacha-machine {
+    height: 300px;
+    border-radius: 1rem;
+    border-width: 3px;
+  }
+
+  .idle-state p {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+  }
+
+  .btn-draw {
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+  }
+
+  .result-card {
+    padding: 1.5rem;
+  }
+
+  .grade-badge {
+    font-size: 1rem;
+    padding: 0.4rem 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .result-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .price {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  th, td {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .badge {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .gacha-machine {
+    height: 250px;
+  }
 }
