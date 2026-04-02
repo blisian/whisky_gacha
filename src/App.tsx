@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import confetti from 'canvas-confetti';
 import { Sparkles, Trophy, RotateCcw, Volume2, VolumeX } from 'lucide-react';
 import whiskeyData from './whiskey_data.json';
