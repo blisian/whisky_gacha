@@ -153,7 +153,7 @@ function App() {
                 </tr>
               </thead>
               <tbody>
-                {items.slice(0, 10).map((item) => (
+                {items.map((item) => (
                   <tr key={item.id}>
                     <td><span className="badge" style={{ backgroundColor: item.color }}>{item.grade}</span></td>
                     <td>{item.brand}</td>
@@ -161,11 +161,6 @@ function App() {
                     <td>{item.probability}%</td>
                   </tr>
                 ))}
-                <tr>
-                  <td colSpan={4} style={{ textAlign: 'center', fontSize: '0.8rem', color: '#666' }}>
-                    외 {items.length - 10}개의 품목이 더 있습니다...
-                  </td>
-                </tr>
               </tbody>
             </table>
           </div>
